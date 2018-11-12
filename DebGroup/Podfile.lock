@@ -1,0 +1,61 @@
+PODS:
+  - Alamofire (4.7.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - ENMBadgedBarButtonItem (4.0.1)
+  - IQKeyboardManagerSwift (5.0.7)
+  - KeychainAccess (3.1.0)
+  - MarqueeLabel (3.1.4):
+    - MarqueeLabel/ObjC (= 3.1.4)
+  - MarqueeLabel/ObjC (3.1.4)
+  - MultiAutoCompleteTextSwift (0.1.1)
+  - ReachabilitySwift (4.1.0)
+  - SQLite.swift (0.11.4):
+    - SQLite.swift/standard (= 0.11.4)
+  - SQLite.swift/standard (0.11.4)
+  - SwiftMessages (4.1.0)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.2)
+  - ENMBadgedBarButtonItem
+  - IQKeyboardManagerSwift
+  - KeychainAccess
+  - MarqueeLabel
+  - MultiAutoCompleteTextSwift
+  - ReachabilitySwift
+  - SQLite.swift
+  - SwiftMessages
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - ENMBadgedBarButtonItem
+    - IQKeyboardManagerSwift
+    - KeychainAccess
+    - MarqueeLabel
+    - MultiAutoCompleteTextSwift
+    - ReachabilitySwift
+    - SQLite.swift
+    - SwiftMessages
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  ENMBadgedBarButtonItem: 3982ad839dd22f37df4fb5d5531d01e667a4195e
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
+  MultiAutoCompleteTextSwift: d5631e77b48413af5795e14a1ae6d72054fe2d1e
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
+  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 085adf375ff37a1ea976ea34819936523dfbd9c5
+
+COCOAPODS: 1.5.3

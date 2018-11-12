@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dashboardTableViewCellIdentifier" rowHeight="214" id="p4F-cp-Eai" customClass="KLTDashboardTableViewCell" customModule="KLTOpenTab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p4F-cp-Eai" id="ebx-Nn-yn2">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="213.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ku3-iU-iLN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+                        <color key="backgroundColor" red="0.064637109639999996" green="0.4653429389" blue="0.72288173440000003" alpha="0.86301369863013699" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zlI-gA-AJC">
+                            <size key="itemSize" width="50" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.78257179259999998" green="0.18707901239999999" blue="0.3878305554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Ku3-iU-iLN" firstAttribute="leading" secondItem="ebx-Nn-yn2" secondAttribute="leading" id="4pX-7b-EDp"/>
+                    <constraint firstAttribute="bottom" secondItem="Ku3-iU-iLN" secondAttribute="bottom" id="JHc-3u-p51"/>
+                    <constraint firstItem="Ku3-iU-iLN" firstAttribute="top" secondItem="ebx-Nn-yn2" secondAttribute="top" id="ncI-n1-wVf"/>
+                    <constraint firstAttribute="trailing" secondItem="Ku3-iU-iLN" secondAttribute="trailing" id="zfW-5w-fqX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemsCollection" destination="Ku3-iU-iLN" id="sGz-2w-WNu"/>
+            </connections>
+            <point key="canvasLocation" x="92.5" y="-129"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wRE-Hn-F3g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtI-7G-gjn" customClass="ScrollingMenu" customModule="OpenTab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                <color key="backgroundColor" red="0.2224271148443222" green="0.3012118935585022" blue="0.35304573178291321" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="hsL-1H-j2H"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qk3-Su-eA3" customClass="SlotMachineMenu" customModule="OpenTab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="95" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.8331720232963562" green="0.50035762786865234" blue="0.29799804091453552" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xeP-PL-zgr"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-0d-7Zb">
+                                <rect key="frame" x="0.0" y="135" width="375" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qk3-Su-eA3" secondAttribute="trailing" id="6EO-Jz-Guf"/>
+                            <constraint firstItem="qk3-Su-eA3" firstAttribute="top" secondItem="TtI-7G-gjn" secondAttribute="bottom" id="G13-6J-D3a"/>
+                            <constraint firstItem="qk3-Su-eA3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eLx-Uj-3Pq"/>
+                            <constraint firstItem="TtI-7G-gjn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eXy-SM-lS7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3GT-0d-7Zb" secondAttribute="bottom" id="fGB-Wb-uY0"/>
+                            <constraint firstItem="3GT-0d-7Zb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gRt-MR-Huh"/>
+                            <constraint firstAttribute="trailing" secondItem="3GT-0d-7Zb" secondAttribute="trailing" id="ouf-g8-ZWM"/>
+                            <constraint firstItem="TtI-7G-gjn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rdX-sb-kqG"/>
+                            <constraint firstAttribute="trailing" secondItem="TtI-7G-gjn" secondAttribute="trailing" id="sc5-3u-ntz"/>
+                            <constraint firstItem="3GT-0d-7Zb" firstAttribute="top" secondItem="qk3-Su-eA3" secondAttribute="bottom" id="yV2-F9-QKS"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="rs9-NI-aHc">
+                        <barButtonItem key="rightBarButtonItem" image="envelope" id="mVy-Td-6hr"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryPicker" destination="qk3-Su-eA3" id="tDU-5x-Xbb"/>
+                        <outlet property="itemsTable" destination="3GT-0d-7Zb" id="xnR-T9-lRa"/>
+                        <outlet property="scrollingMenuOne" destination="TtI-7G-gjn" id="cuf-1j-Qep"/>
+                        <segue destination="X6U-P1-z4P" kind="show" identifier="ItemDetailViewControllerSegue" id="igZ-99-V2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="28.335832083958024"/>
+        </scene>
+        <!--Item Detail View Controller-->
+        <scene sceneID="5gq-T1-ctq">
+            <objects>
+                <viewController storyboardIdentifier="ItemDetailViewControllerIdentifier" id="X6U-P1-z4P" customClass="ItemDetailViewController" customModule="OpenTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkQ-3p-aau"/>
+                        <viewControllerLayoutGuide type="bottom" id="NFN-So-txw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L8q-li-GKh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brochure" translatesAutoresizingMaskIntoConstraints="NO" id="gJf-VR-BIb">
+                                <rect key="frame" x="20" y="104" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DmC-l1-mDm"/>
+                                    <constraint firstAttribute="height" constant="100" id="K8z-jU-1z3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBQ-OP-b4k">
+                                <rect key="frame" x="140" y="104" width="227" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eBQ-OP-b4k" firstAttribute="leading" secondItem="gJf-VR-BIb" secondAttribute="trailing" constant="20" id="6xY-A2-z3l"/>
+                            <constraint firstItem="eBQ-OP-b4k" firstAttribute="top" secondItem="gJf-VR-BIb" secondAttribute="top" id="9aP-E2-VT6"/>
+                            <constraint firstItem="gJf-VR-BIb" firstAttribute="leading" secondItem="L8q-li-GKh" secondAttribute="leading" constant="20" id="AZn-hs-wnM"/>
+                            <constraint firstAttribute="trailing" secondItem="eBQ-OP-b4k" secondAttribute="trailing" constant="8" id="FHW-nv-pzL"/>
+                            <constraint firstItem="gJf-VR-BIb" firstAttribute="top" secondItem="qkQ-3p-aau" secondAttribute="bottom" constant="40" id="JEV-yU-le7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GaF-kA-FJY"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="eBQ-OP-b4k" id="Hrw-Hf-7ih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zp2-g1-7i4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208.8000000000002" y="28.335832083958024"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BOR-QH-x3P">
+            <objects>
+                <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="wRE-Hn-F3g" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uXs-ed-ljS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="V5a-Tj-U3q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3h6-8R-PoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1314" y="28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brochure" width="251" height="201"/>
+        <image name="envelope" width="28" height="22"/>
+    </resources>
+    <color key="tintColor" red="0.83317202329999995" green="0.50035762790000005" blue="0.29799804089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+</document>

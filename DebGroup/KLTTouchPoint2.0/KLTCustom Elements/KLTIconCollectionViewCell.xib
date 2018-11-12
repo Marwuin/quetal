@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="iconCollectionViewCellIdentifier" id="Kfi-0k-0cN" customClass="KLTIconCollectionViewCell" customModule="KLTOpenTab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="141" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="141" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-Ui-dcm">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="126"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pch-cB-ebP" customClass="KLTGradientView" customModule="KLTOpenTab" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="126"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU4-iD-rfP">
+                        <rect key="frame" x="0.0" y="90" width="141" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.72864940069999995" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="jac-w3-WIU"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" white="0.91604275170000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" paragraphSpacingBefore="5" firstLineHeadIndent="15" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js1-pZ-zz1" userLabel="Overlay Button">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="126"/>
+                        <connections>
+                            <action selector="viewDocumentSelected:" destination="Kfi-0k-0cN" eventType="touchUpInside" id="Adb-jM-7Zt"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJ5-8i-4iS" userLabel="Overlay">
+                        <rect key="frame" x="0.0" y="0.0" width="141" height="126"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY1-oi-YiI">
+                                <rect key="frame" x="20" y="94" width="25" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="LmA-jN-OKW"/>
+                                    <constraint firstAttribute="height" constant="22" id="WCt-a6-5dO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="envelope"/>
+                                <connections>
+                                    <action selector="addToMailbag:" destination="Kfi-0k-0cN" eventType="touchUpInside" id="IdZ-Za-yFr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p46-92-SNI">
+                                <rect key="frame" x="8" y="53" width="125" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ht-a6-WAA" userLabel="Fav Button">
+                                <rect key="frame" x="103" y="90" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="9Bb-Cr-UxJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Oeu-6C-g2d"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="unfav">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.72864940069999995" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="fav"/>
+                                <connections>
+                                    <action selector="toggleFav:" destination="Kfi-0k-0cN" eventType="touchUpInside" id="VLO-E6-r2f"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NWg-v2-edY">
+                                <rect key="frame" x="52" y="45" width="37" height="37"/>
+                                <color key="color" red="0.064637109639999996" green="0.4653429389" blue="0.72288173440000003" alpha="0.86301369859999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.699493838028169" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Ht-a6-WAA" secondAttribute="trailing" constant="8" id="HkX-EF-yQr"/>
+                            <constraint firstItem="NWg-v2-edY" firstAttribute="centerX" secondItem="iJ5-8i-4iS" secondAttribute="centerX" id="Vsj-3F-Ce9"/>
+                            <constraint firstAttribute="trailing" secondItem="p46-92-SNI" secondAttribute="trailing" constant="8" id="YEp-fb-1gB"/>
+                            <constraint firstItem="p46-92-SNI" firstAttribute="leading" secondItem="iJ5-8i-4iS" secondAttribute="leading" constant="8" id="ZIX-nI-gXx"/>
+                            <constraint firstItem="iY1-oi-YiI" firstAttribute="leading" secondItem="iJ5-8i-4iS" secondAttribute="leading" constant="20" id="e6E-WA-EPC"/>
+                            <constraint firstAttribute="bottom" secondItem="iY1-oi-YiI" secondAttribute="bottom" constant="10" id="oUV-da-1mo"/>
+                            <constraint firstItem="9Ht-a6-WAA" firstAttribute="centerY" secondItem="iY1-oi-YiI" secondAttribute="centerY" id="rP3-n4-zF1"/>
+                            <constraint firstItem="p46-92-SNI" firstAttribute="centerY" secondItem="iJ5-8i-4iS" secondAttribute="centerY" id="vzT-Oz-FPU"/>
+                            <constraint firstItem="NWg-v2-edY" firstAttribute="centerY" secondItem="iJ5-8i-4iS" secondAttribute="centerY" id="zr4-Iv-AIe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="3cQ-Ui-dcm" firstAttribute="leading" secondItem="Kfi-0k-0cN" secondAttribute="leading" id="1N5-Mb-sZq"/>
+                <constraint firstItem="Js1-pZ-zz1" firstAttribute="leading" secondItem="Kfi-0k-0cN" secondAttribute="leading" id="2qf-e7-Rp4"/>
+                <constraint firstItem="xU4-iD-rfP" firstAttribute="leading" secondItem="Kfi-0k-0cN" secondAttribute="leading" id="5VH-a6-cx2"/>
+                <constraint firstAttribute="bottom" secondItem="3cQ-Ui-dcm" secondAttribute="bottom" id="9g7-1i-n9E"/>
+                <constraint firstItem="3cQ-Ui-dcm" firstAttribute="top" secondItem="Kfi-0k-0cN" secondAttribute="top" id="CDr-2U-vRe"/>
+                <constraint firstAttribute="bottom" secondItem="xU4-iD-rfP" secondAttribute="bottom" id="G3m-kv-Kxt"/>
+                <constraint firstAttribute="bottom" secondItem="pch-cB-ebP" secondAttribute="bottom" id="Pyb-dl-vT5"/>
+                <constraint firstItem="iJ5-8i-4iS" firstAttribute="leading" secondItem="Kfi-0k-0cN" secondAttribute="leading" id="RoS-Ym-u3m"/>
+                <constraint firstAttribute="trailing" secondItem="iJ5-8i-4iS" secondAttribute="trailing" id="UXD-M9-2VA"/>
+                <constraint firstItem="pch-cB-ebP" firstAttribute="leading" secondItem="Kfi-0k-0cN" secondAttribute="leading" id="XD6-2M-Avx"/>
+                <constraint firstAttribute="trailing" secondItem="3cQ-Ui-dcm" secondAttribute="trailing" id="YKt-2U-Jnf"/>
+                <constraint firstItem="pch-cB-ebP" firstAttribute="top" secondItem="Kfi-0k-0cN" secondAttribute="top" id="dpK-Sf-Kda"/>
+                <constraint firstAttribute="bottom" secondItem="Js1-pZ-zz1" secondAttribute="bottom" id="mfW-ip-gyg"/>
+                <constraint firstAttribute="trailing" secondItem="pch-cB-ebP" secondAttribute="trailing" id="ojv-SR-XbH"/>
+                <constraint firstAttribute="trailing" secondItem="Js1-pZ-zz1" secondAttribute="trailing" id="rZM-ak-8Yu"/>
+                <constraint firstAttribute="bottom" secondItem="iJ5-8i-4iS" secondAttribute="bottom" id="tmh-t3-Gch"/>
+                <constraint firstItem="Js1-pZ-zz1" firstAttribute="top" secondItem="Kfi-0k-0cN" secondAttribute="top" id="tpS-UM-rGb"/>
+                <constraint firstAttribute="trailing" secondItem="xU4-iD-rfP" secondAttribute="trailing" id="vEG-C0-3Mb"/>
+                <constraint firstItem="iJ5-8i-4iS" firstAttribute="top" secondItem="Kfi-0k-0cN" secondAttribute="top" id="wZv-VF-Vck"/>
+            </constraints>
+            <size key="customSize" width="141" height="126"/>
+            <connections>
+                <outlet property="activityIndicator" destination="NWg-v2-edY" id="EM9-Lw-SEx"/>
+                <outlet property="container" destination="iJ5-8i-4iS" id="Or1-nD-AS6"/>
+                <outlet property="fabButton" destination="9Ht-a6-WAA" id="9d0-kI-I13"/>
+                <outlet property="icon" destination="3cQ-Ui-dcm" id="BVf-0n-Hsi"/>
+                <outlet property="label" destination="p46-92-SNI" id="WV2-de-aGG"/>
+                <outlet property="mailbagButton" destination="iY1-oi-YiI" id="MAQ-eL-1rl"/>
+                <outlet property="nameLabel" destination="xU4-iD-rfP" id="Lk5-XS-T6l"/>
+                <outlet property="overlay" destination="iJ5-8i-4iS" id="GHd-xV-0KC"/>
+            </connections>
+            <point key="canvasLocation" x="-73.5" y="-136"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="envelope" width="20" height="16"/>
+        <image name="fav" width="21" height="20"/>
+        <image name="unfav" width="21" height="20"/>
+    </resources>
+</document>

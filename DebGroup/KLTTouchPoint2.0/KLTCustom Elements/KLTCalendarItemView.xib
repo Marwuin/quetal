@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KLTCalendarItemView" customModule="KLTOpenTab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nc2-ia-OUN">
+                    <rect key="frame" x="0.0" y="40" width="375" height="375"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nc2-ia-OUN" secondAttribute="height" multiplier="1:1" id="BWO-5B-bIa"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hX-Uu-ZQP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Cec-n1-wla"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqv-kO-9RO">
+                    <rect key="frame" x="10" y="0.0" width="355" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5PC-cA-eyD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <size key="shadowOffset" width="1" height="1"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-ve-SA2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <action selector="calendarItemSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="uyu-Fz-6tA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rWO-ve-SA2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Cdy-oq-lJs"/>
+                <constraint firstItem="8hX-Uu-ZQP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FgB-eU-b9d"/>
+                <constraint firstItem="nc2-ia-OUN" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="GC0-zz-57R"/>
+                <constraint firstItem="nc2-ia-OUN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HIa-Iz-7k0"/>
+                <constraint firstAttribute="trailing" secondItem="Iqv-kO-9RO" secondAttribute="trailing" constant="10" id="HNw-1s-y1T"/>
+                <constraint firstItem="8hX-Uu-ZQP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NKx-b8-yZn"/>
+                <constraint firstItem="rWO-ve-SA2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RV5-LA-aLk"/>
+                <constraint firstItem="rWO-ve-SA2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="T4B-Kq-j71"/>
+                <constraint firstItem="nc2-ia-OUN" firstAttribute="top" secondItem="8hX-Uu-ZQP" secondAttribute="bottom" id="T4W-OV-8Zh"/>
+                <constraint firstItem="Iqv-kO-9RO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e8q-MJ-ELh"/>
+                <constraint firstItem="Iqv-kO-9RO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="pnZ-C5-pNO"/>
+                <constraint firstItem="rWO-ve-SA2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="t3F-du-gsH"/>
+                <constraint firstItem="8hX-Uu-ZQP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="wvo-uw-Tr7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="thumb" destination="nc2-ia-OUN" id="Khy-tD-Auh"/>
+                <outlet property="title" destination="Iqv-kO-9RO" id="xxz-L1-caD"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="82.5"/>
+        </view>
+    </objects>
+</document>

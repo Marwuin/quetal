@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MailbagCellIdentifier" rowHeight="185" id="KGk-i7-Jjw" customClass="KLTMailbagTableViewCell" customModule="KLTOpenTab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="184.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bDO-Xb-Zxg">
+                        <rect key="frame" x="16" y="16" width="50" height="50"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="MCm-Ku-oU0"/>
+                            <constraint firstAttribute="height" constant="50" id="P9c-rE-gkS"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Tca-1R-L7n"/>
+                            <constraint firstAttribute="width" constant="50" id="uaq-nv-H4U"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mailbag item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-g5-RHt">
+                        <rect key="frame" x="74" y="16" width="114" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.29020041229999999" green="0.29018819330000001" blue="0.29019650819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsm-IR-126">
+                        <rect key="frame" x="244" y="21" width="60" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="ESb-9S-yEc"/>
+                        </constraints>
+                        <color key="tintColor" red="0.1210411787" green="0.22783310709999999" blue="0.40011760590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" image="trash"/>
+                        <connections>
+                            <action selector="envelopePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hxq-Qw-qMB"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWd-Qh-HI7">
+                        <rect key="frame" x="196" y="21" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="0O6-pC-h8r"/>
+                            <constraint firstAttribute="height" constant="40" id="7HE-w9-7qQ"/>
+                        </constraints>
+                        <color key="tintColor" red="0.1210411787" green="0.22783310709999999" blue="0.40011760590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" image="viewIcon"/>
+                        <connections>
+                            <action selector="viewPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZLU-6T-aZU"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xsm-IR-126" firstAttribute="height" secondItem="DWd-Qh-HI7" secondAttribute="height" id="1j2-TM-9d9"/>
+                    <constraint firstItem="bDO-Xb-Zxg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="3UU-Yg-T9m"/>
+                    <constraint firstItem="Xsm-IR-126" firstAttribute="leading" secondItem="DWd-Qh-HI7" secondAttribute="trailing" constant="8" id="8jT-4g-ZZ8"/>
+                    <constraint firstItem="DWd-Qh-HI7" firstAttribute="centerY" secondItem="bDO-Xb-Zxg" secondAttribute="centerY" id="BSf-b1-LYa"/>
+                    <constraint firstItem="Xsm-IR-126" firstAttribute="centerY" secondItem="bDO-Xb-Zxg" secondAttribute="centerY" id="Hlx-WR-Bwk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xsm-IR-126" secondAttribute="trailing" constant="8" id="LgF-0N-1mM"/>
+                    <constraint firstItem="XdU-g5-RHt" firstAttribute="top" secondItem="bDO-Xb-Zxg" secondAttribute="top" id="Lpi-Sz-jqk"/>
+                    <constraint firstItem="bDO-Xb-Zxg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Nbc-hz-V55"/>
+                    <constraint firstItem="XdU-g5-RHt" firstAttribute="leading" secondItem="bDO-Xb-Zxg" secondAttribute="trailing" constant="8" id="PmI-GM-prv"/>
+                    <constraint firstItem="DWd-Qh-HI7" firstAttribute="leading" secondItem="XdU-g5-RHt" secondAttribute="trailing" constant="8" id="erb-v1-j0w"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="bDO-Xb-Zxg" secondAttribute="bottom" constant="8" id="u3y-oR-iOr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="envelopeButton" destination="Xsm-IR-126" id="mjE-g7-f6U"/>
+                <outlet property="thumbnail" destination="bDO-Xb-Zxg" id="9qa-s7-anw"/>
+                <outlet property="titleLabel" destination="XdU-g5-RHt" id="oDS-KB-p61"/>
+                <outlet property="viewButton" destination="DWd-Qh-HI7" id="NeE-WO-4vZ"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="-18.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash" width="27" height="31"/>
+        <image name="viewIcon" width="20" height="20"/>
+    </resources>
+</document>

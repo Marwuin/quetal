@@ -1,0 +1,6 @@
+framework module Pods_KLTTouchPoint2_0 {
+  umbrella header "Pods-KLTTouchPoint2.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

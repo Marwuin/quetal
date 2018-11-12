@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dashboardViewCellIdentifier" id="gTV-IL-0wX" customClass="KLTDashboardCollectionViewCell" customModule="KLTTouchPoint2_0" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="524" height="320"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="524" height="320"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-4O-f6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="524" height="320"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aU1-M1-4J0" customClass="KLTGradientView" customModule="KLTTouchPoint2_0" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="524" height="284"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEk-dt-bUB">
+                        <rect key="frame" x="0.0" y="284" width="524" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.72864940068493156" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="Qtc-UN-ylR"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" white="0.91604275173611116" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" paragraphSpacingBefore="5" firstLineHeadIndent="15" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6Z-PO-fdp">
+                        <rect key="frame" x="0.0" y="0.0" width="524" height="284"/>
+                        <connections>
+                            <action selector="viewDocPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="oAK-7E-Zq2"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLn-6h-97S">
+                        <rect key="frame" x="486" y="8" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="UQm-LG-duw"/>
+                            <constraint firstAttribute="height" constant="30" id="s2d-Ip-QlT"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Button" image="unfav"/>
+                        <state key="selected" image="fav"/>
+                        <connections>
+                            <action selector="fabPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="SRD-0F-8Rl"/>
+                            <action selector="toggleFav:" destination="gTV-IL-0wX" eventType="touchUpInside" id="TSf-DN-iFU"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="aU1-M1-4J0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3rd-Ye-NY1"/>
+                <constraint firstItem="cSn-4O-f6Y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9mG-PG-fG8"/>
+                <constraint firstAttribute="trailing" secondItem="HLn-6h-97S" secondAttribute="trailing" constant="8" id="AjF-St-mQT"/>
+                <constraint firstAttribute="trailing" secondItem="O6Z-PO-fdp" secondAttribute="trailing" id="B14-Tv-gwW"/>
+                <constraint firstItem="cSn-4O-f6Y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DR3-Tj-Ta1"/>
+                <constraint firstItem="zEk-dt-bUB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EiR-LR-ZYP"/>
+                <constraint firstItem="zEk-dt-bUB" firstAttribute="top" secondItem="aU1-M1-4J0" secondAttribute="bottom" id="JRo-rP-8dy"/>
+                <constraint firstAttribute="bottom" secondItem="zEk-dt-bUB" secondAttribute="bottom" id="S9I-IP-kVe"/>
+                <constraint firstItem="aU1-M1-4J0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cY1-Q4-y9R"/>
+                <constraint firstAttribute="trailing" secondItem="zEk-dt-bUB" secondAttribute="trailing" id="eOt-aB-WnB"/>
+                <constraint firstItem="zEk-dt-bUB" firstAttribute="top" secondItem="O6Z-PO-fdp" secondAttribute="bottom" id="hfT-m4-IFr"/>
+                <constraint firstItem="O6Z-PO-fdp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="huq-Jo-RYO"/>
+                <constraint firstAttribute="trailing" secondItem="cSn-4O-f6Y" secondAttribute="trailing" id="iVU-Gb-eU2"/>
+                <constraint firstAttribute="trailing" secondItem="aU1-M1-4J0" secondAttribute="trailing" id="o9U-t7-0Ny"/>
+                <constraint firstItem="O6Z-PO-fdp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qYu-jS-UBo"/>
+                <constraint firstItem="HLn-6h-97S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="wRc-28-g1g"/>
+                <constraint firstAttribute="bottom" secondItem="cSn-4O-f6Y" secondAttribute="bottom" id="wzW-UJ-EcS"/>
+            </constraints>
+            <size key="customSize" width="524" height="320"/>
+            <connections>
+                <outlet property="fabButton" destination="HLn-6h-97S" id="wKg-W0-pzI"/>
+                <outlet property="label" destination="zEk-dt-bUB" id="PZw-C9-VuJ"/>
+                <outlet property="thumbnail" destination="cSn-4O-f6Y" id="QM1-RA-2Yp"/>
+            </connections>
+            <point key="canvasLocation" x="307" y="-75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="fav" width="21" height="20"/>
+        <image name="unfav" width="21" height="20"/>
+    </resources>
+</document>

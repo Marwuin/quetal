@@ -1,0 +1,64 @@
+{
+  "topBar": {
+    "backgroundColor": ["#13345e", "#13345e"],
+    "elements": [
+      {
+        "type": "button",
+        "identifier": "close"
+      },
+                 {
+                 "type": "label",
+                 "identifier": "title",
+                 "font": "HelveticaNeue",
+                 "size": 12,
+                 "marginLeft": 8,
+                 "marginRight": 8
+                 },]
+  },
+  "bottomBar": {
+    "backgroundColor": ["#13345e", "#13345e"],
+    "elements": [
+     
+                 {
+        "type": "toggleButton",
+        "identifier": "play",
+                 "marginLeft": 8
+      },
+                 {
+                 "type": "slider",
+                 "identifier": "playback",
+                 "trackHeight": 6,
+                 "trackCornerRadius": 3,
+                 "minimumTrackTintColor": "#116caf",
+                 "availableTrackTintColor": "#17558c",
+                 "maximumTrackTintColor": "#cccccc",
+                 "thumbTintColor": "#f9f9f9",
+                 "thumbBorderWidth": 1,
+                 "thumbBorderColor": "#fff",
+                 "marginRight": 8
+                 },
+                 {
+                 "type": "button",
+                 "identifier": "mail",
+                 "image":"smallenvelope",
+                 "marginRight": 8
+                 },
+                 
+                 {
+                 "type": "button",
+                 "identifier": "tag",
+                 "image":"tag",
+                 "marginRight": 8
+                 
+                 },
+                 {
+                 "type": "button",
+                 "identifier": "fav",
+                 "image":"heart",
+                 "marginRight": 8
+                 }
+
+
+    ]
+  }
+}

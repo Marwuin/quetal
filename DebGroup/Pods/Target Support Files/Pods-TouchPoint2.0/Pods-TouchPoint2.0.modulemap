@@ -1,0 +1,6 @@
+framework module Pods_TouchPoint2_0 {
+  umbrella header "Pods-TouchPoint2.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

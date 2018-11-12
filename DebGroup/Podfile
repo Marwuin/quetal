@@ -1,0 +1,41 @@
+target ‘KLTTouchPoint2.0’ do
+  use_frameworks!
+  pod 'Alamofire', '~> 4.4'
+  pod 'ENMBadgedBarButtonItem'
+  pod 'MarqueeLabel'
+  pod 'SwiftyJSON'
+  pod 'SQLite.swift'
+  pod 'AlamofireImage', '~> 3.2'
+  pod 'MultiAutoCompleteTextSwift'
+  pod 'KeychainAccess'
+  pod 'ReachabilitySwift'
+  pod 'SwiftMessages'
+
+
+#  post_install do
+#      Dir.glob('Pods/SQLite.swift/Sources/SQLite/**/*.swift').each { |path|
+#          begin
+#              text = File.read(path)
+#              text = text.gsub(/import CSQLite/, 'import SQLite3')
+#              File.open(path, 'w') { |file| file.puts text }
+#              rescue Exception
+#              puts "Unable to patch #{path}: #{$!}"
+#          end
+#      }
+#  end
+
+  
+end
+
+target ‘TouchPoint2.0’ do
+  use_frameworks!
+  pod 'IQKeyboardManagerSwift'
+end
+
+
+
+
+
+#pod ‘MZDownloadManager’
+
+
